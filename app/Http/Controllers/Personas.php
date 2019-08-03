@@ -30,10 +30,10 @@ class Personas extends Controller
             $persona->fechaNacimiento = $fechaNacimineto->format('d-m-Y');
             $persona->edad = $anioActual - $anioNacimiento;
         }
-
-        // usort($data, function($a, $b) {
-        //     return $a->rut - $b->rut;
-        // });
+        
+        usort($data, function($a, $b) {
+            return $a->rut - $b->rut;
+        });
 
         return view('personas', [
             'titles' => $titles,
