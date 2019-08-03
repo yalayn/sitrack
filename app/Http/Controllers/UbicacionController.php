@@ -14,7 +14,24 @@ class UbicacionController extends Controller
      */
     public function index()
     {
-        //
+        return array(
+            array(
+                "latitud" => 40.7127837,
+                "longitud" => -74.0059413,
+                "radio" => 40,
+            ),
+            array(
+                "latitud" => -33.4377968,
+                "longitud" => -70.6504451,
+                "radio" => 33,
+            ),
+            array(
+                "latitud" => -34.6075682,
+                "longitud" => -58.4370894,
+                "radio" => 58,
+            )
+        )
+        ;
     }
 
     /**
@@ -24,7 +41,7 @@ class UbicacionController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
