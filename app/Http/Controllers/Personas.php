@@ -9,6 +9,10 @@ use DateTime;
 class Personas extends Controller
 {
 
+    /**
+     * [Consulta datos de una API externa y procesa los datos]
+     * @return view [Vista de personas]
+     */
     public function datos(){
 
         $anioActual = date('Y');
@@ -30,7 +34,7 @@ class Personas extends Controller
             $persona->fechaNacimiento = $fechaNacimineto->format('d-m-Y');
             $persona->edad = $anioActual - $anioNacimiento;
         }
-        
+
         usort($data, function($a, $b) {
             return $a->rut - $b->rut;
         });
